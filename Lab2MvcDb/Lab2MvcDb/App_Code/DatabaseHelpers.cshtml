@@ -1,0 +1,33 @@
+﻿@using System.Collections.Generic
+@using Lab2MvcDb.Models
+
+@helper RecordsTable(IList<DatabaseRecord> records, string caption)
+{
+    int i = 0;
+    <h3>@caption</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Название базы данных</th>
+                <th>СУБД</th>
+                <th>Таблиц</th>
+                <th>E-mail администратора</th>
+            </tr>
+        </thead>
+        <tbody>
+            @while (i < records.Count)
+            {
+                var item = records[i];
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@item.DatabaseName</td>
+                    <td>@item.DbmsName</td>
+                    <td>@item.TableCount</td>
+                    <td>@item.AdminEmail</td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+}

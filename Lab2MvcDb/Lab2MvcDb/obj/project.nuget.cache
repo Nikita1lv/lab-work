@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "rfbIpvPSsNA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sosud\\Documents\\тплаптев\\Lab2MvcDb\\Lab2MvcDb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sosud\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.9\\microsoft.aspnet.mvc.5.2.9.nupkg.sha512",
+    "C:\\Users\\Sosud\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.9\\microsoft.aspnet.razor.3.2.9.nupkg.sha512",
+    "C:\\Users\\Sosud\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.9\\microsoft.aspnet.webpages.3.2.9.nupkg.sha512",
+    "C:\\Users\\Sosud\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,58 @@
+﻿@model IList<Lab2MvcDb.Models.DatabaseRecord>
+
+@{
+    ViewBag.Title = "Вспомогательные методы";
+    bool useExternal = TempData["UseExternalHelper"] is bool && (bool)TempData["UseExternalHelper"];
+}
+
+@helper InternalRecordsTable(IList<Lab2MvcDb.Models.DatabaseRecord> records, string caption)
+{
+    int i = 0;
+    <h3>@caption</h3>
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Название базы данных</th>
+                <th>СУБД</th>
+                <th>Таблиц</th>
+                <th>E-mail администратора</th>
+            </tr>
+        </thead>
+        <tbody>
+            @while (i < records.Count)
+            {
+                var item = records[i];
+                <tr>
+                    <td>@(i + 1)</td>
+                    <td>@item.DatabaseName</td>
+                    <td>@item.DbmsName</td>
+                    <td>@item.TableCount</td>
+                    <td>@item.AdminEmail</td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+}
+
+<h2>Внутренний и внешний вспомогательные методы</h2>
+
+<p class="note">
+    Значение логического типа передается через TempData. Если значение true, вызывается внешний helper из App_Code,
+    если false - внутренний helper из этого представления.
+</p>
+
+<div class="actions">
+    @Html.ActionLink("Внешний helper", "AllWithHelpers", new { external = true }, new { @class = "button" })
+    @Html.ActionLink("Внутренний helper", "AllWithHelpers", new { external = false }, new { @class = "button" })
+</div>
+
+@if (useExternal)
+{
+    @DatabaseHelpers.RecordsTable(Model, "Внешний вспомогательный метод")
+}
+else
+{
+    @InternalRecordsTable(Model, "Внутренний вспомогательный метод")
+}

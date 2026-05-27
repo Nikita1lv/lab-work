@@ -1,0 +1,63 @@
+﻿@model Lab2MvcDb.Models.DatabaseRecord
+
+@{
+    ViewBag.Title = "Добавление записи";
+}
+
+<h2>Добавление экземпляра модели</h2>
+
+<p class="note">
+    Вариант Б для добавления: используются LabelFor и EditorFor.
+</p>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Исправьте ошибки ввода", new { @class = "validation" })
+
+    <div class="form-row">
+        @Html.LabelFor(m => m.DatabaseName)
+        @Html.EditorFor(m => m.DatabaseName)
+        @Html.ValidationMessageFor(m => m.DatabaseName, null, new { @class = "validation" })
+    </div>
+
+    <div class="form-row">
+        @Html.LabelFor(m => m.DbmsName)
+        @Html.EditorFor(m => m.DbmsName)
+        @Html.ValidationMessageFor(m => m.DbmsName, null, new { @class = "validation" })
+    </div>
+
+    <div class="form-row">
+        @Html.LabelFor(m => m.TableCount)
+        @Html.EditorFor(m => m.TableCount)
+        @Html.ValidationMessageFor(m => m.TableCount, null, new { @class = "validation" })
+    </div>
+
+    <div class="form-row">
+        @Html.LabelFor(m => m.CreatedAt)
+        @Html.EditorFor(m => m.CreatedAt)
+        @Html.ValidationMessageFor(m => m.CreatedAt, null, new { @class = "validation" })
+    </div>
+
+    <div class="form-row">
+        @Html.LabelFor(m => m.AdminEmail)
+        @Html.EditorFor(m => m.AdminEmail)
+        @Html.ValidationMessageFor(m => m.AdminEmail, null, new { @class = "validation" })
+    </div>
+
+    <div class="form-row checkbox-row">
+        @Html.LabelFor(m => m.IsNormalized)
+        @Html.EditorFor(m => m.IsNormalized)
+        @Html.ValidationMessageFor(m => m.IsNormalized, null, new { @class = "validation" })
+    </div>
+
+    <div class="form-row">
+        @Html.LabelFor(m => m.Description)
+        @Html.EditorFor(m => m.Description)
+        @Html.ValidationMessageFor(m => m.Description, null, new { @class = "validation" })
+    </div>
+
+    <div class="actions">
+        <input type="submit" value="Сохранить" class="button primary" />
+        @Html.ActionLink("Отмена", "Details", null, new { @class = "button" })
+    </div>
+}

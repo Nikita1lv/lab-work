@@ -1,0 +1,15 @@
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\Lab2MvcDb.dll.config
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\Lab2MvcDb.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\Lab2MvcDb.pdb
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\System.Web.Mvc.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\System.Web.Razor.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\System.Web.Helpers.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\System.Web.WebPages.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\obj\Debug\Lab2MvcDb.csproj.AssemblyReference.cache
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\obj\Debug\Lab2MvcDb.csproj.CoreCompileInputs.cache
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\obj\Debug\Lab2MvcDb.csproj.Up2Date
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\obj\Debug\Lab2MvcDb.dll
+C:\Users\Sosud\Documents\тплаптев\Lab2MvcDb\obj\Debug\Lab2MvcDb.pdb

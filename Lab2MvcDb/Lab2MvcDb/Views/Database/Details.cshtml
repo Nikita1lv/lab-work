@@ -1,0 +1,30 @@
+﻿@model Lab2MvcDb.Models.DatabaseRecord
+
+@{
+    ViewBag.Title = "Просмотр текущей записи";
+}
+
+<h2>Просмотр текущего экземпляра модели</h2>
+
+<p class="note">
+    Вариант Б для просмотра: используется @Html.LabelForModel() и @Html.DisplayForModel().
+</p>
+
+<div class="model-title">
+    @Html.LabelForModel()
+</div>
+
+<div class="display-model">
+    @Html.DisplayForModel()
+</div>
+
+<div class="actions">
+    @Html.ActionLink("Назад", "Previous", null, new { @class = "button" })
+    @Html.ActionLink("Вперед", "Next", null, new { @class = "button" })
+    @Html.ActionLink("Редактировать", "Edit", new { index = ViewBag.CurrentIndex }, new { @class = "button primary" })
+    @Html.ActionLink("Все записи", "All", null, new { @class = "button" })
+</div>
+
+<p class="note">
+    Текущий индекс: @(ViewBag.CurrentIndex + 1) из @ViewBag.TotalCount. Индекс сохраняется в Session.
+</p>

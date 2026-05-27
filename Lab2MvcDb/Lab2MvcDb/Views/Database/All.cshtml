@@ -1,0 +1,52 @@
+﻿@model IList<Lab2MvcDb.Models.DatabaseRecord>
+
+@{
+    ViewBag.Title = "Все записи";
+    int i = 0;
+}
+
+<h2>Просмотр всех экземпляров модели</h2>
+
+<p class="note">
+    Часть II, п.2, вариант В: вывод списка выполнен циклом while.
+</p>
+
+<table class="data-table">
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Название базы данных</th>
+            <th>СУБД</th>
+            <th>Таблиц</th>
+            <th>Дата создания</th>
+            <th>E-mail администратора</th>
+            <th>Нормализована</th>
+            <th>Действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @while (i < Model.Count)
+        {
+            var item = Model[i];
+            <tr class="@(i == ViewBag.CurrentIndex ? "current-row" : "")">
+                <td>@(i + 1)</td>
+                <td>@item.DatabaseName</td>
+                <td>@item.DbmsName</td>
+                <td>@item.TableCount</td>
+                <td>@item.CreatedAt.ToShortDateString()</td>
+                <td>@item.AdminEmail</td>
+                <td>@(item.IsNormalized ? "Да" : "Нет")</td>
+                <td>
+                    @Html.ActionLink("Открыть", "Details", new { index = i }) |
+                    @Html.ActionLink("Редактировать", "Edit", new { index = i })
+                </td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>
+
+<div class="actions">
+    @Html.ActionLink("Добавить запись", "Create", null, new { @class = "button primary" })
+    @Html.ActionLink("Показать через helper", "AllWithHelpers", null, new { @class = "button" })
+</div>
